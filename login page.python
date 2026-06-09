@@ -1,0 +1,37 @@
+import tkinter
+from tkinter import*
+w1=tkinter.Tk()
+w1.geometry("800x850")
+w1.title("imagecon")
+w1.configure(background="black")
+L1=Label(w1,text="Login Page",bg="black",fg="white",font=("times new roman",70,"bold italic")).place(x=550,y=80)
+L2=Label(w1,text="Username",bg="black",fg="white",font=("times new roman",50,"bold italic")).place(x=100,y=250)
+L3=Label(w1,text="Password",bg="black",fg="white",font=("times new roman",50,"bold italic")).place(x=100,y=350)
+e1=Entry(w1).place(x=500,y=300, width=250,height=40)
+e2=Entry(w1,show="*").place(x=500,y=400,width=250,height=40)
+def login():
+    w1.destroy()
+    w2=tkinter.Tk()
+    w2.geometry("800x850")
+    w2.configure(background="red")
+    L4=Label(w2,text="Sign In",bg="red",fg="black",font=("times new roman",70,"bold italic")).place(x=250,y=80)
+    L5=Label(w2,text="Name :",bg="red",fg="black",font=("times new roman",50,"bold italic")).place(x=50,y=200)
+    L6=Label(w2,text="Date of birth :",bg="red",fg="black",font=("times new roman",50,"bold italic")).place(x=50,y=300)
+    L7=Label(w2,text="Email id :",bg="red",fg="black",font=("times new roman",50,"bold italic")).place(x=50,y=400)
+    L8=Label(w2,text="Phone number :",bg="red",fg="black",font=("times new roman",50,"bold italic")).place(x=50,y=500)
+    e3=Entry(w2).place(x=300,y=230)
+    e4=Entry(w2,show="*").place(x=500,y=350)
+    e5=Entry(w2,show="*").place(x=400,y=430)
+    e6=Entry(w2,show="*").place(x=550,y=540)
+    b2=Button(w2,text="Sign In",bg="red",fg="white",font=("times new roman",50,"bold italic")).place(x=400,y=600)
+def SignIn():
+    w2.destroy()
+    w3=tkinter.Tk()
+    w3.geometry("800x850")
+    w3,configure(backgound="blue")
+    L9=Lable(w3,text="login successfully",bg="blue",fg="white",font=("times new roman",100,"bold italic")).place(x=400,y=400)
+
+b1=Button(w1,text="login",bg="black",fg="white",font=("times new roman",50,"bold italic"),command=login).place(x=400,y=550)
+b2=Button(w2,text="Sign In",bg="red",fg="white",font=("times new roman",50,"bold italic"),command=login).place(x=400,y=600)
+w1.mainloop()
+
